@@ -8,7 +8,7 @@ const projects = [
         tech: ["Automatización", "Gestión", "Integración"],
         demoUrl: "https://example-ecommerce-demo.vercel.app",
         codeUrl: "https://github.com/chispart/ecommerce-dashboard",
-        image: "Gestión"
+        image: "assets/images/projects/gestion-comercial.png"
     },
     {
         id: 2,
@@ -18,7 +18,7 @@ const projects = [
         tech: ["Integración", "APIs", "Automatización"],
         demoUrl: "https://task-api-demo.herokuapp.com",
         codeUrl: "https://github.com/chispart/task-manager-api",
-        image: "API"
+        image: "assets/images/projects/api-integracion.png"
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ const projects = [
         tech: ["Consulta", "Tiempo Real", "Análisis"],
         demoUrl: "https://weather-app-demo.netlify.app",
         codeUrl: "https://github.com/chispart/weather-app",
-        image: "Consulta"
+        image: "assets/images/projects/app-consulta.png"
     },
     {
         id: 4,
@@ -38,7 +38,7 @@ const projects = [
         tech: ["Optimización", "Validación", "Eficiencia"],
         demoUrl: null,
         codeUrl: "https://github.com/chispart/code-formatter",
-        image: "Optimización"
+        image: "assets/images/projects/herramienta-optimizacion.png"
     },
     {
         id: 5,
@@ -48,7 +48,7 @@ const projects = [
         tech: ["Presencia Digital", "Automatización", "Branding"],
         demoUrl: "https://portfolio-gen-demo.vercel.app",
         codeUrl: "https://github.com/chispart/portfolio-generator",
-        image: "Presencia"
+        image: "assets/images/projects/presencia-digital.png"
     },
     {
         id: 6,
@@ -58,59 +58,17 @@ const projects = [
         tech: ["Comunicación", "IA", "Automatización"],
         demoUrl: "https://chatbot-api-demo.herokuapp.com",
         codeUrl: "https://github.com/chispart/chatbot-api",
-        image: "Comunicación"
-    }
-];
-
-// Datos de demos
-const demos = [
-    {
-        id: 1,
-        title: "E-Commerce Dashboard",
-        description: "Explora el panel de administración completo con datos de ejemplo. Incluye gráficos interactivos, gestión de productos y análisis de ventas.",
-        url: "https://example-ecommerce-demo.vercel.app",
-        tech: ["React", "Chart.js", "Material-UI"],
-        github: "https://github.com/chispart/ecommerce-dashboard",
-        live: "https://example-ecommerce-demo.vercel.app"
-    },
-    {
-        id: 2,
-        title: "Weather App",
-        description: "Aplicación del clima con datos en tiempo real. Prueba la búsqueda por ciudad, geolocalización y pronósticos de 7 días.",
-        url: "https://weather-app-demo.netlify.app",
-        tech: ["JavaScript", "OpenWeather API", "CSS3"],
-        github: "https://github.com/chispart/weather-app",
-        live: "https://weather-app-demo.netlify.app"
-    },
-    {
-        id: 3,
-        title: "Task Manager",
-        description: "Gestor de tareas con funcionalidades completas. Crea, edita, organiza y marca tareas como completadas.",
-        url: "https://task-manager-demo.vercel.app",
-        tech: ["Vue.js", "Vuex", "LocalStorage"],
-        github: "https://github.com/chispart/task-manager",
-        live: "https://task-manager-demo.vercel.app"
-    },
-    {
-        id: 4,
-        title: "Portfolio Generator",
-        description: "Herramienta para generar portafolios automáticamente. Conecta tu GitHub y genera un sitio web profesional.",
-        url: "https://portfolio-gen-demo.vercel.app",
-        tech: ["JavaScript", "GitHub API", "CSS Grid"],
-        github: "https://github.com/chispart/portfolio-generator",
-        live: "https://portfolio-gen-demo.vercel.app"
+        image: "assets/images/projects/comunicacion-inteligente.png"
     }
 ];
 
 // Variables globales
 let currentFilter = 'all';
-let currentDemo = null;
 
 // Inicialización
 document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     renderProjects();
-    renderDemos();
     initContactForm();
     initScrollAnimations();
 });
@@ -196,7 +154,7 @@ function renderProjects() {
         const card = document.createElement('div');
         card.className = `project-card ${project.category}`;
         card.innerHTML = `
-            <div class="project-image">${project.image}</div>
+            <img src="${project.image}" alt="${project.title}" class="project-image">
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
@@ -204,8 +162,8 @@ function renderProjects() {
                     ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                 </div>
                 <div class="project-links">
-                    ${project.demoUrl ? `<a href="${project.demoUrl}" class="project-link link-demo" target="_blank">Ver Demo</a>` : ''}
-                    <a href="${project.codeUrl}" class="project-link link-code" target="_blank">Ver Código</a>
+                    ${project.demoUrl ? `<a href="${project.demoUrl}" class="project-link link-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>` : ''}
+                    <a href="${project.codeUrl}" class="project-link link-code" target="_blank" rel="noopener noreferrer">Ver Código</a>
                 </div>
             </div>
         `;
@@ -234,72 +192,6 @@ function renderProjects() {
 
     // Initial render
     displayProjects();
-}
-
-// Renderizar demos
-function renderDemos() {
-    const demoTabs = document.querySelector('.demo-tabs');
-    const demoFrame = document.getElementById('demo-frame');
-    const demoTitle = document.querySelector('.demo-title');
-    const demoDescription = document.querySelector('.demo-description');
-    const demoTechStack = document.querySelector('.demo-tech-stack');
-    const demoLinks = document.querySelector('.demo-links');
-    const demoLoading = document.querySelector('.demo-loading');
-
-    // Create demo tabs
-    demos.forEach((demo, index) => {
-        const tab = document.createElement('button');
-        tab.className = `demo-tab ${index === 0 ? 'active' : ''}`;
-        tab.textContent = demo.title;
-        tab.addEventListener('click', () => loadDemo(demo));
-        demoTabs.appendChild(tab);
-    });
-
-    // Load demo function
-    function loadDemo(demo) {
-        // Update active tab
-        document.querySelectorAll('.demo-tab').forEach(tab => tab.classList.remove('active'));
-        event.target.classList.add('active');
-
-        // Show loading
-        demoLoading.style.display = 'block';
-        demoFrame.style.opacity = '0';
-
-        // Update demo info
-        demoTitle.textContent = demo.title;
-        demoDescription.textContent = demo.description;
-        
-        // Update tech stack
-        demoTechStack.innerHTML = `
-            <h4>Tecnologías:</h4>
-            ${demo.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-        `;
-
-        // Update links
-        demoLinks.innerHTML = `
-            <a href="${demo.live}" class="demo-link primary" target="_blank">Abrir en Nueva Pestaña</a>
-            <a href="${demo.github}" class="demo-link secondary" target="_blank">Ver Código</a>
-        `;
-
-        // Load iframe
-        demoFrame.src = demo.url;
-        currentDemo = demo;
-
-        // Handle iframe load
-        demoFrame.onload = function() {
-            setTimeout(() => {
-                demoLoading.style.display = 'none';
-                demoFrame.style.opacity = '1';
-            }, 1000);
-        };
-    }
-
-    // Load first demo by default
-    if (demos.length > 0) {
-        setTimeout(() => {
-            loadDemo(demos[0]);
-        }, 500);
-    }
 }
 
 // Formulario de contacto
@@ -479,4 +371,3 @@ notificationStyles.textContent = `
 `;
 
 document.head.appendChild(notificationStyles);
-

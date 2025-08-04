@@ -358,10 +358,10 @@ class DemoManager {
         `;
 
         demoLinks.innerHTML = `
-            <a href="${demo.url}" class="demo-link primary" target="_blank">
+            <a href="${demo.url}" class="demo-link primary" target="_blank" rel="noopener noreferrer">
                 <span>↗</span> Abrir en Nueva Pestaña
             </a>
-            <a href="${demo.github}" class="demo-link secondary" target="_blank">
+            <a href="${demo.github}" class="demo-link secondary" target="_blank" rel="noopener noreferrer">
                 <span>📁</span> Ver Código Fuente
             </a>
         `;
@@ -472,13 +472,13 @@ class DemoManager {
 
     openInNewTab() {
         if (this.currentDemo) {
-            window.open(this.currentDemo.url, '_blank');
+            window.open(this.currentDemo.url, '_blank', 'noopener,noreferrer');
         }
     }
 
     openGitHub() {
         if (this.currentDemo) {
-            window.open(this.currentDemo.github, '_blank');
+            window.open(this.currentDemo.github, '_blank', 'noopener,noreferrer');
         }
     }
 
