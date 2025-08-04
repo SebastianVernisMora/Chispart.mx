@@ -1,0 +1,454 @@
+/* Demo Enhancements CSS */
+
+/* Category Filter */
+.demo-category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 8px 20px;
+    border: 2px solid var(--pastel-blue);
+    background: transparent;
+    color: var(--dark-gray);
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: var(--pastel-blue);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Enhanced Demo Tabs */
+.demo-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 15px 20px;
+    min-width: 140px;
+}
+
+.demo-tab-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.demo-tab-status {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.demo-tab-status.active {
+    opacity: 1;
+}
+
+.demo-tab-status.maintenance {
+    opacity: 0.7;
+}
+
+.demo-tab-status.offline {
+    opacity: 0.5;
+}
+
+/* Enhanced Loading */
+.demo-enhanced-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border-radius: 20px;
+}
+
+.loading-content {
+    text-align: center;
+    max-width: 300px;
+}
+
+.loading-spinner-enhanced {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--light-gray);
+    border-top: 4px solid var(--pastel-purple);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1.5rem;
+}
+
+.loading-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+}
+
+.loading-message {
+    color: var(--medium-gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.loading-progress {
+    width: 100%;
+    height: 4px;
+    background: var(--light-gray);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--gradient-primary);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.loading-cancel {
+    padding: 8px 20px;
+    border: 1px solid var(--pastel-pink);
+    background: transparent;
+    color: var(--dark-gray);
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.loading-cancel:hover {
+    background: var(--pastel-pink);
+    color: white;
+}
+
+/* Error Fallback */
+.demo-error-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.98);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    border-radius: 20px;
+}
+
+.error-content {
+    text-align: center;
+    max-width: 400px;
+    padding: 2rem;
+}
+
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.error-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: var(--medium-gray);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.error-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.btn-retry,
+.btn-fallback,
+.btn-github {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-retry {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+}
+
+.btn-fallback {
+    background: var(--gradient-secondary);
+    color: white;
+    border: none;
+}
+
+.btn-github {
+    background: transparent;
+    color: var(--dark-gray);
+    border: 2px solid var(--pastel-blue);
+}
+
+.btn-retry:hover,
+.btn-fallback:hover,
+.btn-github:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Demo Controls */
+.demo-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 5;
+}
+
+.control-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.fullscreen-btn:hover {
+    background: var(--pastel-green);
+    color: white;
+}
+
+.refresh-btn:hover {
+    background: var(--pastel-blue);
+    color: white;
+}
+
+.external-btn:hover {
+    background: var(--pastel-purple);
+    color: white;
+}
+
+/* Enhanced Demo Info */
+.tech-stack-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.demo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.demo-link span {
+    font-size: 1rem;
+}
+
+/* Fullscreen Styles */
+.demo-container:fullscreen {
+    background: var(--dark-gray);
+    padding: 2rem;
+}
+
+.demo-container:fullscreen .demo-frame-wrapper {
+    height: calc(100vh - 4rem);
+}
+
+.demo-container:fullscreen .demo-frame {
+    height: calc(100vh - 4rem);
+}
+
+.demo-container:fullscreen .demo-info {
+    display: none;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .demo-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .demo-frame-wrapper {
+        min-height: 400px;
+    }
+
+    .demo-frame {
+        height: 400px;
+    }
+
+    .demo-controls {
+        top: 10px;
+        right: 10px;
+        gap: 0.25rem;
+    }
+
+    .control-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .category-btn {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+
+    .demo-tab {
+        min-width: 120px;
+        padding: 12px 15px;
+    }
+
+    .demo-tab-title {
+        font-size: 0.8rem;
+    }
+
+    .error-actions {
+        flex-direction: column;
+    }
+
+    .loading-content {
+        max-width: 250px;
+    }
+
+    .loading-spinner-enhanced {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .demo-category-filter {
+        gap: 0.25rem;
+    }
+
+    .category-btn {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+    }
+
+    .demo-tabs {
+        gap: 0.5rem;
+    }
+
+    .demo-tab {
+        min-width: 100px;
+        padding: 10px 12px;
+    }
+
+    .demo-frame-wrapper {
+        min-height: 300px;
+    }
+
+    .demo-frame {
+        height: 300px;
+    }
+}
+
+/* Animation Enhancements */
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.demo-tab.active {
+    animation: slideInFromBottom 0.3s ease;
+}
+
+.error-content {
+    animation: slideInFromBottom 0.5s ease;
+}
+
+.loading-content {
+    animation: slideInFromBottom 0.3s ease;
+}
+
+/* Accessibility Improvements */
+.control-btn:focus,
+.category-btn:focus,
+.demo-tab:focus {
+    outline: 2px solid var(--pastel-blue);
+    outline-offset: 2px;
+}
+
+.demo-frame:focus {
+    outline: 3px solid var(--pastel-green);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .control-btn {
+        background: white;
+        border: 2px solid var(--dark-gray);
+    }
+    
+    .category-btn,
+    .demo-tab {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .loading-spinner-enhanced {
+        animation: none;
+    }
+    
+    .control-btn:hover,
+    .category-btn:hover,
+    .demo-tab:hover {
+        transform: none;
+    }
+    
+    .slideInFromBottom {
+        animation: none;
+    }
+}
+

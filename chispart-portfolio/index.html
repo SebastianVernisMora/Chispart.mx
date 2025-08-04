@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chispart - Portafolio de Aplicaciones</title>
+    <meta name="description" content="Portafolio de aplicaciones y proyectos de desarrollo web de Chispart. Explora nuestras aplicaciones interactivas y demos en vivo.">
+    <meta name="keywords" content="Chispart, desarrollo web, aplicaciones, portafolio, JavaScript, Python, demos">
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/demo-enhancements.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1 class="brand-name">Chispart</h1>
+                    <span class="brand-tagline">Soluciones Digitales</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
+                    <li><a href="#demos" class="nav-link">Demos</a></li>
+                    <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Bienvenido a Chispart</h2>
+                    <p class="hero-subtitle">Desarrollamos soluciones digitales integrales y tangibles que transforman tu negocio. Desde aplicaciones web hasta estrategias digitales completas.</p>
+                    <div class="hero-buttons">
+                        <a href="#portafolio" class="btn btn-primary">Ver Soluciones</a>
+                        <a href="#demos" class="btn btn-secondary">Probar Demos</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-graphic">
+                        <div class="floating-card card-1"></div>
+                        <div class="floating-card card-2"></div>
+                        <div class="floating-card card-3"></div>
+                        <div class="floating-card card-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portafolio" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Portafolio de Soluciones</h2>
+                    <p class="section-subtitle">Explora una selección de nuestras soluciones digitales más exitosas</p>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="api">APIs</button>
+                    <button class="filter-btn" data-filter="tools">Herramientas</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project cards will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Demos Section -->
+        <section id="demos" class="demos">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Demos Interactivas</h2>
+                    <p class="section-subtitle">Prueba nuestras aplicaciones en vivo directamente desde aquí</p>
+                </div>
+
+                <!-- Demo Selector -->
+                <div class="demo-selector">
+                    <div class="demo-tabs">
+                        <!-- Demo tabs will be dynamically loaded -->
+                    </div>
+                </div>
+
+                <!-- Demo Container -->
+                <div class="demo-container">
+                    <div class="demo-frame-wrapper">
+                        <div class="demo-loading">
+                            <div class="loading-spinner"></div>
+                            <p>Cargando aplicación...</p>
+                        </div>
+                        <iframe id="demo-frame" class="demo-frame" title="Demo Interactiva"></iframe>
+                    </div>
+                    <div class="demo-info">
+                        <h3 class="demo-title">Selecciona una demo</h3>
+                        <p class="demo-description">Elige una aplicación del menú superior para comenzar</p>
+                        <div class="demo-tech-stack">
+                            <!-- Tech stack badges will be added dynamically -->
+                        </div>
+                        <div class="demo-links">
+                            <!-- Links will be added dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre-mi" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Sobre Chispart</h2>
+                        <p class="about-description">
+                            Chispart es una marca de <strong>Sebastian Vernis | Soluciones Digitales</strong>, especializada en 
+                            desarrollar soluciones digitales integrales y tangibles que transforman negocios y optimizan procesos.
+                        </p>
+                        <p class="about-description">
+                            Nuestro enfoque se centra en entender las necesidades específicas de cada cliente para crear 
+                            soluciones digitales personalizadas que generen resultados medibles y un impacto real en su negocio.
+                        </p>
+                        <p class="about-description">
+                            Para servicios de <strong>Marketing Digital</strong> o <strong>Desarrollo Web Avanzado</strong>, 
+                            visita <a href="https://sebastianvernis.com" target="_blank" class="about-link">sebastianvernis.com</a>
+                        </p>
+                        
+                        <div class="solutions-focus">
+                            <h3>Áreas de Especialización</h3>
+                            <div class="solutions-grid">
+                                <div class="solution-item">Aplicaciones Web</div>
+                                <div class="solution-item">Automatización</div>
+                                <div class="solution-item">Integración de Sistemas</div>
+                                <div class="solution-item">Consultoría Digital</div>
+                                <div class="solution-item">Optimización de Procesos</div>
+                                <div class="solution-item">Soluciones Personalizadas</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">25+</div>
+                                <div class="stat-label">Soluciones Entregadas</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Enfoque en Resultados</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">Años de Experiencia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contacto</h2>
+                    <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:contacto@chispart.mx">contacto@chispart.mx</a></p>
+                                <p><a href="mailto:contacto@sebastianvernis.com">contacto@sebastianvernis.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h3>WhatsApp</h3>
+                                <p><a href="https://wa.me/13512306045" target="_blank">+1 351 230 6045</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h3>Teléfono</h3>
+                                <p><a href="tel:+525639667852">563 966 7852</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🌐</div>
+                            <div class="contact-details">
+                                <h3>Sitios Web</h3>
+                                <p>www.chispart.mx</p>
+                                <p><a href="https://sebastianvernis.com" target="_blank">sebastianvernis.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Chispart</h3>
+                    <p>Sebastian Vernis | Soluciones Digitales</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#portafolio">Portafolio</a>
+                    <a href="#demos">Demos</a>
+                    <a href="#sobre-mi">Sobre Mí</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://sebastianvernis.com" class="social-link" target="_blank">Sebastian Vernis</a>
+                    <a href="mailto:contacto@chispart.mx" class="social-link">Email</a>
+                    <a href="https://wa.me/13512306045" class="social-link" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chispart. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/demo-manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
