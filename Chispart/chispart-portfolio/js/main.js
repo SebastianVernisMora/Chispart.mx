@@ -59,6 +59,16 @@ const projects = [
         demoUrl: "https://chatbot-api-demo.herokuapp.com",
         codeUrl: "https://github.com/chispart/chatbot-api",
         image: "assets/images/projects/comunicacion-inteligente.png"
+    },
+    {
+        id: 7,
+        title: "Generador de Imágenes con IA",
+        description: "Aplicación web para generar imágenes a partir de texto utilizando inteligencia artificial. Ideal para crear contenido visual de forma rápida y sencilla.",
+        category: "web",
+        tech: ["IA", "Generador", "Web App"],
+        demoUrl: "https://chisp-art-image-gen.vercel.app/",
+        codeUrl: "https://github.com/chispart/chisp-art-image-gen",
+        image: "assets/images/projects/image-generator.png"
     }
 ];
 
